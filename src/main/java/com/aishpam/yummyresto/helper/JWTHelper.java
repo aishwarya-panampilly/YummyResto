@@ -12,9 +12,8 @@ import java.util.function.Function;
 
 @Component
 public class JWTHelper {
-    private String SECRET_KEY = "cr666N7wIV+KJ2xOQpWtcfAekL4YXd9gbnJMs8SJ9sI=";
+    private final String SECRET_KEY = "cr666N7wIV+KJ2xOQpWtcfAekL4YXd9gbnJMs8SJ9sI=";
 
-    // Extract username from the token
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
@@ -56,7 +55,7 @@ public class JWTHelper {
     // Validate token
     public Boolean validateToken(String token, String username) {
         final String extractedUsername = extractUsername(token);
-//        return (extractedUsername.equals(username) && !isTokenExpired(token));
+        //return (extractedUsername.equals(username) && !isTokenExpired(token));
         return !isTokenExpired(token);
     }
 }

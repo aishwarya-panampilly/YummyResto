@@ -41,13 +41,4 @@ public class CustomerService {
         Customer customer = getCustomer(email);
         return customerMapper.toCustomerResponse(customer);
     }
-
-    public String login(LoginRequest request) {
-        Customer customer = getCustomer(request.email());
-        if(!encryptionService.validates(request.password(), customer.getPassword())) {
-            return "Wrong Password or Email";
-        }
-
-        return jwtHelper.generateToken(request.email());
-    }
 }

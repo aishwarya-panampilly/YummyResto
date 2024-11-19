@@ -16,12 +16,17 @@ public class CustomerController {
     private final CustomerService customerService;
 
     @GetMapping("/{email}")
-    public ResponseEntity<CustomerResponse> getCustomer(@PathVariable("email") String email) {
+    public ResponseEntity<CustomerResponse> getCustomer(
+            @PathVariable("email") String email){
+            System.out.println(email);
+
         return ResponseEntity.ok(customerService.retrieveCustomer(email));
     }
 
     @PostMapping
-    public ResponseEntity<String> createCustomer(@RequestBody @Valid CustomerRequest request) {
+    public ResponseEntity<String> createCustomer(
+            @RequestBody @Valid CustomerRequest request) {
+
         return ResponseEntity.ok(customerService.createCustomer(request));
     }
 }

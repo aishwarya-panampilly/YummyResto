@@ -14,6 +14,8 @@ public class EncryptionService {
     }
 
     public boolean validates(String password, String encodedPassword) {
+        System.out.println("Password: " + password);
+        System.out.println("EncodedPassword: " + encodedPassword);
         return passwordEncoder.matches(password, encodedPassword);
     }
 }

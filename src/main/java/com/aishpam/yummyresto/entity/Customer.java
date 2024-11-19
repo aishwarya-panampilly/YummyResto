@@ -26,6 +26,6 @@ public class Customer {
     @Column(name="password", nullable = false)
     private String password;
 
-    @Column(name = "access_token", unique = true)
-    private String accessToken;
+    /*@Column(name = "access_token", unique = true)
+    private String accessToken;*/
 }
