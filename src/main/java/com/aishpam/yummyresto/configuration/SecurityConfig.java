@@ -20,7 +20,7 @@ public class SecurityConfig  implements WebMvcConfigurer {
         System.out.println("Interceptor=======================");
         registry.addInterceptor(requestInterceptor)
                 .addPathPatterns("/**")
-                .excludePathPatterns("/api/v1/auth/login", "/api/v1/customer");
+                .excludePathPatterns("/api/v1/auth/login");
     }
 
     @Bean
