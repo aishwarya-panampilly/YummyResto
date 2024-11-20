@@ -2,7 +2,6 @@ package com.aishpam.yummyresto.service;
 
 import com.aishpam.yummyresto.dto.CustomerRequest;
 import com.aishpam.yummyresto.dto.CustomerResponse;
-import com.aishpam.yummyresto.dto.LoginRequest;
 import com.aishpam.yummyresto.entity.Customer;
 import com.aishpam.yummyresto.exception.CustomerNotFoundException;
 import com.aishpam.yummyresto.helper.EncryptionService;
